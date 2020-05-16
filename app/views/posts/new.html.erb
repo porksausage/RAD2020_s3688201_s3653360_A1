@@ -1,0 +1,40 @@
+<% provide(:title, "New Post") %>
+
+
+
+<div class="col-md new-post-container">
+    <div>
+    <h5 class="card-header">New Post</h5>
+    </div>
+    <div class="new-post">
+        <%= form_with(model: @Post, local: true) do |f| %>
+            <%= render 'shared/post_error_msg' %>
+
+            <div class="post-form-row">
+                <div class="input-group">
+                    <span class="input-group-addon">Topic</span>
+                    <div ><%= f.select :topic, options_for_select([['News'], ['A.I.'], ['Rails'], ['Go'], ['Game'],['V.R.'], ['Web'], ['Vue'], ['AWS']]) %></div>
+                </div>
+            </div>
+            <div class="post-form-row">
+                <div class="input-group">
+                    <span class="input-group-addon">Title</span>
+                    <div><%= f.text_area :title, class: 'form-control', placeholder: 'Enter post title here' %></div>
+                </div>
+            </div>
+
+            <div class="post-form-row">
+                <div class="new-content"><%= f.text_area :content, class: 'form-control', placeholder: 'Enter your post here', rows: "12" %></div>
+            </div>
+
+            <div class="post-button-group">
+                <div class="post-buttons">
+                    <%= f.submit "Post", class: "btn btn-success" %></div>
+                    <%= link_to "Cancel", root_path ,class: "btn btn-default" %>
+                </div>
+            </div>
+        <% end %>
+
+    </div>
+</div>
+

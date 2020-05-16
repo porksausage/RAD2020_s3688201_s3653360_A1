@@ -1,0 +1,393 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+/* universal */
+
+body {
+  padding-top: 60px;
+  background-color: #e8e8e8;
+}
+
+.mainbody{
+  margin-top: 50px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+/* img in header*/
+.dropdown-toggle img {
+  border-radius: 50%;
+}
+
+
+/* typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* footer */
+
+footer {
+  margin-top: 100px;
+  margin-right:0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-top: 1px solid #eaeaea;
+  color: #eaeaea;
+}
+
+
+/* mixins, variables, etc. */
+
+$gray-medium-light: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+.col-label {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-field {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.form-a-link{
+  float: right;
+}
+
+/* posts */
+
+.posts {
+  list-style: none;
+  padding: 0;
+  background-color: #ffffff;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8; //line between each post
+  }
+  .info {
+    display: inline-block; 
+    //background-color: green;
+  }
+  .user {
+    margin-left: 20px;
+    padding-top: 0;
+    //background-color: red;
+    a:link,a:visited {
+      color:$gray-light;
+      text-decoration: none;
+    }
+    a:hover {
+      color:orangered;
+      text-decoration: none;
+    }
+  }
+  .title {
+    display: block;
+    margin-left: 60px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+    a:link,a:visited {
+      color: black;
+      text-decoration: none;
+    }
+    a:hover {
+      color:orangered;
+      text-decoration: none;
+    }
+  }
+  .timestamp {
+    color: $gray-light;
+    margin-left: 30px;
+    // background-color: blue;
+  }
+  .topic {
+    margin-left: 30px;
+    color: $gray-light;
+    // background-color: yellow;
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+span.image {
+  margin-top: 10px;
+  input {
+    border: 0;
+  }
+}
+
+
+/* fixed right sidebar*/
+.right-side-bar {
+  background-color: #ffffff;
+  margin-top:20px;
+  .card-header {
+    padding:20px;
+    background-color:#dbd9d9;
+  }
+  a:link,a:visited {
+    color:$gray-light;
+    text-decoration: none;
+  }
+  a:hover {
+    color:orangered;
+    text-decoration: none;
+  }
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  // background-color: #2196F3;
+  padding: 10px;
+  
+}
+
+.grid-item {
+  // background-color: rgba(255, 255, 255, 0.8);
+  border: 0px solid red;
+  padding: 5px;
+  text-align: center;
+  margin:0px;
+} 
+
+
+.toppost-container {
+  display: table;
+}
+
+.toppost-container {
+  margin:10px;
+  
+}
+
+.toppost-left {
+  float:left;
+  white-space: nowrap; 
+  width: 50%; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+
+/* nav bar of post */
+.list-group-item {
+  display: inline-block;
+}
+
+.post-buttons {
+  display: inline-block;
+}
+
+
+.list-group-a {
+  a:hover{
+    color:orangered;
+  } 
+}
+
+/* new post */
+.new-post-container {
+  // background-color: #ffffff;
+  margin-top:20px;
+  .card-header {
+    padding:20px;
+    background-color:#dbd9d9;
+    margin:20px;
+  }
+}
+.new-post{
+  margin:20px;
+}
+.post-button-group {
+  margin-top:10px;
+}
+
+.new-post-body{
+  background-color: #ffffff;
+}
+.post-form-row {
+  margin-top:10px;
+}
+
+.new-content {
+  width:auto;
+}
+
+/*  post show */
+.post-container {
+  height: auto;
+  background-color: #ffffff;
+}
+
+.post-inner-container {
+  // background-color: yellow;
+  padding: 40px 50px 40px 50px;
+  margin:40px;
+  .post-area {
+    display: block;
+    margin-top:30px;
+    // background-color: green;
+  }
+  .post-title{
+    margin-top:50px;
+    padding-left:30px;
+  }
+
+}
+
+.post-info{
+  display: block;
+  margin:30px;
+  width:100%;
+  .info {
+    display: inline;
+  }
+}
+
+.post-user-info {
+  display:inline-block;
+  background-color: #e8e8e8;
+  width:95%;
+  margin:30px;
+  .inner-user-info {
+    margin:14px;
+    img {
+      border-radius: 50%;
+    }
+    .timestamp{
+      display: inline;
+      color: $gray-light;
+
+    }
+  }
+}
+
+.post-content {
+  // background-color: purple;
+  display:inline-block;
+  margin-top:30px;
+  margin-bottom: 30px;
+  padding: 30px;
+}
+
+.post-comment-area {
+  p{
+    padding-left:30px;
+  }
+  .post-comment-view {
+    margin-top:40px;
+  }
+}
+
+
+
+
+
