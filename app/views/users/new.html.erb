@@ -6,6 +6,13 @@
     <%= form_with(model: @user, local: true) do |f| %>
       <%= render 'shared/error_messages' %>
 
+      <div class="form-row">
+        <div class="col-label"><%= f.label :name %></div>
+        <div class="col-field">
+          <%= f.text_field :name, class: 'form-control', placeholder: 'Enter your name' %>
+        </div>
+      </div>
+
 
       <div class="form-row">
         <div class="col-label"><%= f.label :email %></div>
@@ -45,4 +52,5 @@
       <p class="form-a-link"><%= link_to "already a user?",  login_path %></p>
     </div>
   </div>
+</div>
 </div>

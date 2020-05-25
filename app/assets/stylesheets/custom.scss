@@ -5,6 +5,8 @@
 body {
   padding-top: 60px;
   background-color: #e8e8e8;
+  position: relative;
+  min-height: 100vh;
 }
 
 .mainbody{
@@ -85,10 +87,10 @@ p {
 /* footer */
 
 footer {
-  margin-top: 100px;
-  margin-right:0;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  clear: both;
+    position: relative;
+    height: 20px;
+    margin-top: auto;
   border-top: 1px solid #eaeaea;
   color: #eaeaea;
 }
@@ -386,6 +388,7 @@ span.image {
     margin-top:40px;
   }
 }
+
 
 
 

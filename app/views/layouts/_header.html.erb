@@ -29,18 +29,16 @@
           
 
           <% if logged_in? %>
-          <li><%= link_to current_user.name,  current_user %></li>
+          <li><%= link_to current_user.name,  current_user.name %></li>
         </ul>
         <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
           <li class="dropdown float-right">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <%= gravatar_for current_user, size: 40 %>
             </a>
-            <ul class="dropdown-menu">
               <li>
                 <%= link_to "Log out", logout_path, method: :delete %>
               </li>
-            </ul>
           </li>
 
           <% else %>
