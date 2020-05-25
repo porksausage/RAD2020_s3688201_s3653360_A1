@@ -26,10 +26,8 @@
             <ul class="dropdown-menu">
             </ul>
           </li>
-          
-
           <% if logged_in? %>
-          <li><%= link_to current_user.name,  current_user.name %></li>
+          <li><%= link_to current_user.name,  current_user %></li>
         </ul>
         <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
           <li class="dropdown float-right">
