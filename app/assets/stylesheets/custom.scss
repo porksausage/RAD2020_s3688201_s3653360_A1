@@ -45,6 +45,7 @@ h6 {
   line-height: 1;
 }
 
+
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
@@ -90,7 +91,7 @@ footer {
   clear: both;
     position: relative;
     height: 20px;
-    margin-top: auto;
+    margin-top: 190px;
   border-top: 1px solid #eaeaea;
   color: #eaeaea;
 }
@@ -233,8 +234,8 @@ span.image {
   background-color: #ffffff;
   margin-top:20px;
   .card-header {
-    padding:20px;
-    background-color:#dbd9d9;
+    padding:10px;
+    background: -webkit-linear-gradient(left, #ff0000 0%, #ff3535 1%, #d6d6d6 1%, #e1e1e1 100%);
   }
   a:link,a:visited {
     color:$gray-light;
@@ -255,7 +256,7 @@ span.image {
 
 .grid-item {
   // background-color: rgba(255, 255, 255, 0.8);
-  border: 0px solid red;
+  border: 0px solid #ff3d00;
   padding: 5px;
   text-align: center;
   margin:0px;
@@ -282,6 +283,10 @@ span.image {
 /* nav bar of post */
 .list-group-item {
   display: inline-block;
+}
+
+.list-group-item:focus{
+  color:orangered;
 }
 
 .post-buttons {
@@ -389,8 +394,12 @@ span.image {
   }
 }
 
+.navbar-nav.navcenter{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
 
-
-
-
-
+.spacer {
+  height: 4px;
+}

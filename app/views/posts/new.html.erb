@@ -13,7 +13,7 @@
             <div class="post-form-row">
                 <div class="input-group">
                     <span class="input-group-addon">Topic</span>
-                    <div ><%= f.select :topic, options_for_select([['News'], ['A.I.'], ['Rails'], ['Go'], ['Game'],['V.R.'], ['Web'], ['Vue'], ['AWS']]) %></div>
+                    <div ><%= f.select :topic, options_for_select([['Select Topic' ,'News'], ['A.I.'], ['Rails'], ['Go'], ['Game'],['V.R.'], ['Web'], ['Vue'], ['AWS']], selected: ['Select Topic' ,'News']) %></div>
                 </div>
             </div>
             <div class="post-form-row">
