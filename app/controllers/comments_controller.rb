@@ -3,10 +3,16 @@ class CommentsController < ApplicationController
 
   def index
     @comment = Comment.all
+    @users = User.all
+    @comments = Comment.where("created_at >= ?", 1.month.ago.utc).order(created_at: :desc)
+    @recentcomment= Comment.order(updated_at: :desc).limit(10)
   end
 
   def show
     @comment = Comment.find(params[:id])
+    @users = User.all
+    @recentcomment= Comment.order(updated_at: :desc).limit(10)
+    
   end
 
   def new

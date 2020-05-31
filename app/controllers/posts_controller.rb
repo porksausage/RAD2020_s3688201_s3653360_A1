@@ -33,6 +33,10 @@ class PostsController < ApplicationController
     def destroy 
     end
 
+    def checkbox
+      tag_ids = params[:tag_ids]
+    end
+
 
   
     private

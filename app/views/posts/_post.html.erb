@@ -2,17 +2,12 @@
 <ol class="posts">
   <% @posts.each do |post| %>
     <li>
-    <%= link_to gravatar_for(post.user, size: 40), post.user %>
     <span class="title"><%= link_to post.title, post %></span>
-    <div class="info user"><%= link_to post.user.name, post.user %></div>
     <div class="info timestamp"><%= post.created_at %></div>
     <div class="info topic"><%= post.topic %></div>
     &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp
-    <span class="glyphicon glyphicon-comment info topic"></span>
-    <div class="info"><%= post.comments.count() %></div>
     
-    <span class="glyphicon glyphicon-eye-open info topic"></span>
-    <div class="info"><%= post.view %></div>
+    
     </li>
   <% end %>
 </ol>
