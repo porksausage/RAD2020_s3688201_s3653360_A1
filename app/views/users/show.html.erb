@@ -6,7 +6,7 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
-      <p>
+      <p class="center">
       <span class="glyphicon glyphicon-time"></span>
       Join time:<%= @user.created_at %>
       <span class="glyphicon glyphicon-map-marker"></span>
@@ -16,7 +16,7 @@
 
 
   <div class="col-md-8">
-  <h3>Posts (<%= @user.posts.count %>)</h3>
+  <h3 class="center">Posts (<%= @user.posts.count %>)</h3>
   <% if @user.posts.any? %>
     <ol class="posts">
       <%= render @posts %>
@@ -25,7 +25,7 @@
   </div>
   
   <div class="col-md-8">
-    <h3>Comments (<%= @user.comments.count %>)</h3>
+    <h3 class="center">Comments (<%= @user.comments.count %>)</h3>
     <% if @user.comments.any? %>
     <ol class="posts">
       <%= render @comments %>

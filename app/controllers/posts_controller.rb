@@ -15,6 +15,12 @@ class PostsController < ApplicationController
         @users = User.all
         @toppost = Post.order(view: :desc).limit(5)
         @recentpost= Post.order(updated_at: :desc).limit(12)
+
+        respond_to do |format|
+          format.html # select.html.erb
+          format.js # select.js.erb
+          format.json { render json: @posts }
+        end
     end
 
     def select

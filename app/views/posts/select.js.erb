@@ -1,0 +1,11 @@
+$(".post").change(function(){
+  var value = $(this).val()
+  $.ajax({
+    url: <%= stores_path(:json) %>,
+    type: 'GET',
+    data: value,
+    success: function(data){
+      $("#products_list").html(data.products)
+    }
+  })
+})
