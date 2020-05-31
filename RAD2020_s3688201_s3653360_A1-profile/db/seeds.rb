@@ -10,21 +10,17 @@
 User.create!(email: "rad@example.com",
              mobile:  "0401000000",
              name: "RAD",
-             city: "Mars",
              password:              "Rails2020",
-             password_confirmation: "Rails2020",
-             admin: true)
+             password_confirmation: "Rails2020")
 
 # Generate a bunch of additional users.
 11.times do |n|
     mobile = "0401000000"
     email = "example-#{n+1}@example.com"
     name = Faker::Lorem.sentence(word_count: 1)
-    city = Faker::Lorem.sentence(word_count: 2)
     password = "000000000"
     User.create!(mobile:  mobile,
                  email: email,
-                 city: city,
                  name: name,
                  password:              password,
                  password_confirmation: password)

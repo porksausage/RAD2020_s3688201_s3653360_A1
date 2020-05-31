@@ -1,0 +1,17 @@
+
+<div class="new-post">
+<%= form_with(model: [@post, @post.comments.build ], local: true) do |f| %>
+    <%= render 'shared/comment_error_msg' %>
+
+    <div class="post-form-row">
+        <div class="new-content"><%= f.text_area :comment_content, class: 'form-control', rows: "5" %></div>
+    </div>
+
+    <div class="post-button-group">
+        <div class="post-buttons">
+            <%= f.submit "Post", class: "btn btn-primary" %>
+        </div>
+    </div>
+<% end %>
+
+</div>

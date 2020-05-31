@@ -1,19 +1,17 @@
 <% provide(:title, @user.email) %>
 <div class="row">
 
+  <aside class="col-md-4">
     <section class="user_info">
       <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
-      <p>
-      <span class="glyphicon glyphicon-time"></span>
-      Join time:<%= @user.created_at %>
-      <span class="glyphicon glyphicon-map-marker"></span>
-      City:<%= @user.city%>
-      </p>
-    </section>
 
+      <h3>
+      </h3>
+    </section>
+  </aside>
 
   <div class="col-md-8">
   <h3>Posts (<%= @user.posts.count %>)</h3>
@@ -27,7 +25,7 @@
   <div class="col-md-8">
     <h3>Comments (<%= @user.comments.count %>)</h3>
     <% if @user.comments.any? %>
-    <ol class="posts">
+    <ol class="comments">
       <%= render @comments %>
     </ol>
   <% end %>
