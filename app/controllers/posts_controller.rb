@@ -17,6 +17,14 @@ class PostsController < ApplicationController
         @recentpost= Post.order(updated_at: :desc).limit(12)
     end
 
+    def select
+      @posts = Post.where("created_at >= ?", 1.month.ago.utc).order(created_at: :desc)
+      @users = User.all
+      @toppost = Post.order(view: :desc).limit(5)
+      @recentpost= Post.order(updated_at: :desc).limit(12)
+    end
+
+
     def new
       @post = Post.new()
     end
