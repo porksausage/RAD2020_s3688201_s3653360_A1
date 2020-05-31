@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Create a main sample user.
-User.create!(email: "rad@example.com",
+User.create!(email: "rad2020rmit@gmail.com",
              mobile:  "0401000000",
              name: "RAD",
              city: "Mars",
