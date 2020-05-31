@@ -3,6 +3,7 @@ class PostsController < ApplicationController
     
     def show
       @post = Post.find(params[:id])
+      @post.increment
       @users = User.all
       @toppost = Post.order(view: :desc).limit(5)
       @recentpost= Post.order(updated_at: :desc).limit(12)
