@@ -12,6 +12,6 @@ Time sheet for Jiecai Ma - s3653360 47h
 
 Github depolyment url:https://github.com/porksausage/RAD2020_s3688201_s3653360_A1
 
-Heroku deployment URL: https://rad-sfnjc.herokuapp.com/
+Heroku deployment URL: https://radradrad.herokuapp.com/
 
-The last Heroku deployment log: 2020-05-31T11:12:50.644738+00:00 heroku[router]
+The last Heroku deployment log: 2020-05-31T11:56:58.679879+00:00 heroku[router]
