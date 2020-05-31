@@ -4,10 +4,10 @@
 
 
 
-  <div class="col-md-8">
+  <div class="col-xs-9 col-md-7">
 
     <nav class="navbar navbar-light bg-light">
-      <div class="list-group">
+      <div class="list-group col-sm-8">
       <div class="list-group-a post-buttons">
         <%= link_to "Recent Post", root_path, class: "list-group-item" %>
         <%= link_to "Selected Post", select_path, class: "list-group-item" %>
@@ -37,7 +37,7 @@
     </section>
   </div>
 
-  <div class="col-md-4">
+  <div class="col-xs-3 col-md-5">
     <section class="members">
       <%= render 'shared/member' %>
     </section>
