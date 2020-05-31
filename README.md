@@ -4,11 +4,11 @@ Team members:
 1. Sifeng Wang - s3688201
 2. Jiecai Ma - s3653360
 
-The highest level: 
+The highest level: DI
 
-Time sheet for Sifeng Wang - s3688201
+Time sheet for Sifeng Wang - s3688201 45h
 
-Time sheet for Jiecai Ma - s3653360
+Time sheet for Jiecai Ma - s3653360 47h
 
 Heroku deployment URL:
 
