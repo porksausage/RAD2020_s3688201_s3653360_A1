@@ -1,11 +1,9 @@
     
-<ol class="comments">
-    <% @comments.each do |comment| %>
-      <li>
+<ol class="posts">
+<li>
       <span class="title"><%= link_to comment.comment_content %></span>
       &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp
       <div class="info timestamp"><%= comment.created_at %></div>
       <div class="info topic"><%= comment.post.topic %></div>
       </li>
-    <% end %>
 </ol>

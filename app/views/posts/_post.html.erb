@@ -1,6 +1,5 @@
 
 <ol class="posts">
-  <% @posts.each do |post| %>
     <li>
     <%= link_to gravatar_for(post.user, size: 40), post.user %>
     <div class="info user"><%= link_to post.user.name, post.user %></div>
@@ -10,10 +9,7 @@
     &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp
     <span class="glyphicon glyphicon-comment info topic"></span>
     <div class="info"><%= post.comments.count() %></div>
-    
     <span class="glyphicon glyphicon-eye-open info topic"></span>
     <div class="info"><%= post.view %></div>
-    
     </li>
-  <% end %>
 </ol>

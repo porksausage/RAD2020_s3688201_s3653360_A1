@@ -10,6 +10,7 @@ class CommentsController < ApplicationController
 
   def show
     @comment = Comment.find(params[:id])
+    @posts = Post.all.includes(:comments)
     @users = User.all
     @recentcomment= Comment.order(updated_at: :desc).limit(10)
     
