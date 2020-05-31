@@ -6,9 +6,12 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
-
-      <h3>
-      </h3>
+      <p>
+      <span class="glyphicon glyphicon-time"></span>
+      Join time:<%= @user.created_at %>
+      <span class="glyphicon glyphicon-map-marker"></span>
+      City:<%= @user.city%>
+      </p>
     </section>
 
 

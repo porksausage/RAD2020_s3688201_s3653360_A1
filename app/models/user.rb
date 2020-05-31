@@ -2,6 +2,8 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
     before_save { self.email = email.downcase }
+    validates :name, presence: true, length: { maximum: 50 }
+    validates :city, presence: true, length: { maximum: 50 }
     VALID_MOBILE_REGEX = /[0-9]{10,13}/
     validates :mobile,  presence: true, format: { with: VALID_MOBILE_REGEX }
                       # format: { with: VALID_MOBILE_REGEX } 
