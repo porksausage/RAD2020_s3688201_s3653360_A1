@@ -3,20 +3,23 @@ class CommentsController < ApplicationController
 
   def index
     @comment = Comment.all
+    @users = User.all
   end
 
   def show
     @comment = Comment.find(params[:id])
+    @users = User.all
   end
 
   def new
     @comment = Comment.new()
+    @users = User.all
   end
 
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.build(comment_params)
-    @comment.user_id = current_user.id
+    @comment.user_name = current_user.name
     if @comment.save
       flash[:success] = "New comment created!"
       redirect_to post_path(@post)

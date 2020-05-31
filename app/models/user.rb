@@ -3,6 +3,7 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
     before_save { self.email = email.downcase }
     VALID_MOBILE_REGEX = /[0-9]{10,13}/
+    validates :name, presence: true, length: { maximum: 50 }
     validates :mobile,  presence: true, format: { with: VALID_MOBILE_REGEX }
                       # format: { with: VALID_MOBILE_REGEX } 
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

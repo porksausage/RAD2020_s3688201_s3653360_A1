@@ -27,17 +27,17 @@ User.create!(email: "rad@example.com",
   end
 
 # Generate posts for a subset of users.
-# users = User.order(:created_at).take(10)
-# 1.times do
-#     title = Faker::Lorem.sentence(word_count: 5)
-#     topic = "Rails"
-#     content = Faker::Lorem.sentence(word_count: 50)
-#     view = 1000
-#     users.each { |user| user.posts.create!(title:  title,
-#                                             topic: topic,
-#                                             content: content,
-#                                             view: view) }
-#     end
+users = User.order(:created_at).take(5)
+3.times do
+    title = Faker::Lorem.sentence(word_count: 5)
+    topic = "Rails"
+    content = Faker::Lorem.sentence(word_count: 50)
+    view = 1000
+    users.each { |user| user.posts.create!(title:  title,
+                                            topic: topic,
+                                            content: content,
+                                            view: view) }
+    end
 
 Post.create!(title: Faker::Lorem.sentence(word_count: 10),
              content:Faker::Lorem.sentence(word_count: 300),

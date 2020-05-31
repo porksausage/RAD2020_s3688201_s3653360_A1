@@ -2,6 +2,5 @@
 <p><%= @post.comments.count() %> Comments</p>
 <% @post.comments.each do |comment| %>
     
-    <%= comment.comment_content %>
-    <%= comment.user_id %><br>
+    <%= comment.comment_content %><br>
     <% end %>

@@ -15,5 +15,11 @@
       <%= render @posts %>
     </ol>
   <% end %>
+  <% if @user.comments.any? %>
+    <h3>comments</h3>
+    <ol class="comments">
+      <%= render 'comments/show' %>
+    </ol>
+  <% end %>
 </div>
 </div>

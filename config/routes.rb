@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  
+
   root 'posts#index'
 
   get '', to:'posts#index'
